@@ -1,0 +1,4 @@
+name = "JuliaTutorial"
+uuid = "1cfd3c1c-e1ad-4c5d-acbb-885a47d393ed"
+authors = ["Tomo Soejima <tomohiro_soejima@berkeley.edu>"]
+version = "0.1.0"
