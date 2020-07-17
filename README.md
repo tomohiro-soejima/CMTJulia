@@ -12,20 +12,20 @@ We will use jupyter notebooks for some of the demonstrations. So make sure to do
 
 Launch `julia` either from command line or by launching the executable, and perform following commands.
 
-```julia
+```julia-repl
 
->julia using Pkg
+julia> using Pkg
 
->julia Pkg.add("IJulia")
+julia> Pkg.add("IJulia")
 
->julia Pkg.build("IJulia")
+julia> Pkg.build("IJulia")
 ```
 
 ### Instantiate the package
 
 Now, we need to download other necessary dependencies. Julia makes this process pretty easy. Navigate to `CMTJulia` directory, and launch `julia` from there.
 
-```julia
+```julia-repl
 
 julia> using Pkg
 
@@ -46,7 +46,7 @@ and then launch julia as usual. Once in julia session, run `Threads.nthreads()`.
 
 In order to quickly test multithreading, do the following to compare the speed of serial and parallel version of `myupdate` function in `src/JuliaTutorial`.
 
-```julia
+```julia-repl
 julia> using Pkg
 
 julia> Pkg.activate("./")
