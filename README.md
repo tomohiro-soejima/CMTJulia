@@ -27,11 +27,11 @@ Now, we need to download other necessary dependencies. Julia makes this process 
 
 ```julia
 
->julia using Pkg
+julia> using Pkg
 
->julia Pkg.activate("./")
+julia> Pkg.activate("./")
 
->julia Pkg.instantiate("./")
+julia> Pkg.instantiate("./")
 ```
 
 This should start the installation process. Once you are done, you are ready to start exploring the notebooks!
@@ -47,19 +47,19 @@ and then launch julia as usual. Once in julia session, run `Threads.nthreads()`.
 In order to quickly test multithreading, do the following to compare the speed of serial and parallel version of `myupdate` function in `src/JuliaTutorial`.
 
 ```julia
->julia using Pkg
+julia> using Pkg
 
->julia Pkg.activate("./")
+julia> Pkg.activate("./")
 
->julia using JuliaTutorial
+julia> using JuliaTutorial
 
->julia y = rand(1_000_000); x = rand(1_000_000);
+julia> y = rand(1_000_000); x = rand(1_000_000);
 
->julia myupdate!(y, x); myparallelupdate!(y, x); # run them once to initiate compilaoin
+julia> myupdate!(y, x); myparallelupdate!(y, x); # run them once to initiate compilaoin
 
->julia @time myupdate!(y, x)
+julia> @time myupdate!(y, x)
 
->julia @tme myparallelupdate!(y, x)
+julia> @time myparallelupdate!(y, x)
 ```
 
 Try making the size of `y` and `x` bigger to see the power of parallelization!
